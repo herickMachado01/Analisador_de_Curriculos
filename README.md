@@ -1,40 +1,31 @@
-Analisador de Currículos com n8n + IA (Groq + LLaMA)
-Automação completa para análise inteligente de currículos
+🌟 Analisador de Currículos — Automação com n8n + IA (Groq + LLaMA)
+Sistema automático de triagem e análise profissional de currículos
+📌 Descrição
 
-📌 Descrição do Projeto
+Este projeto é um fluxo completo criado no n8n para automatizar o processo de análise de currículos enviados em PDF.
+Ele utiliza IA (LLaMA 3.3 70B via Groq) para extrair informações, gerar um resumo profissional, identificar o nome do candidato e avaliar se ele combina com a vaga (match).
 
-Este projeto é um fluxo n8n totalmente automatizado para análise de currículos usando IA (LLaMA 3.3 70B via Groq), extração de dados de PDFs e gravação em Google Sheets.
+Todo o resultado é enviado automaticamente para uma planilha no Google Sheets.
 
-Ele permite que qualquer pessoa envie um PDF de currículo, e o sistema faz automaticamente:
+O objetivo é facilitar a triagem de candidatos na área de Desenvolvimento de Software (Python), deixando o processo mais rápido, inteligente e organizado.
 
-✨ Extrai o texto do arquivo
-✨ Identifica o nome do candidato
-✨ Gera uma análise qualitativa profissional
-✨ Determina se o candidato combina com a vaga (match)
-✨ Limpa o texto com JavaScript para entregar só o essencial
-✨ Salva tudo automaticamente em uma planilha Google Sheets
+🚀 Funcionalidades do Projeto
+Função	O que faz
+📥 Form Trigger	Recebe o nome do candidato + currículo PDF
+📄 PDF Extract	Extrai o texto do currículo automaticamente
+🧠 IA com Groq (LLaMA 3.3 70B)	Faz análise completa e gera resumo
+🎯 Match da Vaga	IA retorna { "match": true/false }
+🧹 JavaScript de Limpeza	Separa nome + resumo sem o prompt
+📊 Google Sheets	Registra Nome, Match e Resumo automaticamente
+🔄 Fluxo 100% automatizado	Nenhuma intervenção manual necessária
+🛠 Tecnologias Utilizadas
 
-Ideal para automatizar recrutamento, triagem e avaliações técnicas.
-
-🚀 Funcionalidades Principais
-Função	Descrição
-📥 Form Trigger	Recebe Nome + PDF do currículo
-📄 Extração do PDF	Converte PDF para texto
-🧠 Análise com IA (Groq LLaMA)	Gera resumo + avaliação profissional
-🎯 Verificação de Match	Retorna { "match": true/false }
-🧹 Limpeza do Output com JavaScript	Extrai só o nome e o resumo limpo
-📊 Envio para Google Sheets	Salva automaticamente Nome, Match e Resumo
-🔗 Tudo no mesmo fluxo do n8n	Fácil de importar, fácil de editar
-
-
-Tecnologias Utilizadas
-
-n8n (Cloud / Self-hosted)
+n8n (Automação)
 
 Groq API – LLaMA 3.3 70B
 
 Google Sheets API
 
-JavaScript (para limpeza e manipulação do output)
+Extract From File (PDF → texto)
 
-Extract From File (PDF → Texto)
+JavaScript para limpeza e formatação do output
